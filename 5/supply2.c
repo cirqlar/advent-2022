@@ -77,18 +77,21 @@ int main(void) {
 			from = atoi(fromstring) - 1; 
 		}
 
-		for (int i = 0; i < move; i ++) {
-			item *moving = stacks[from];
-			if (moving == NULL) {
-				printf("Moving something that isn't there \n%s", instruction);
-				printstack(stacks, numofstacks);
-				return 1;
-			}
-			stacks[from] = moving->below;
-
-			moving->below = stacks[to];
-			stacks[to] = moving;
+		item *top = stacks[from];
+		if (top == NULL) {
+			printf("Top problem\n");
+			return 1;
 		}
+		item *bottom = stacks[from];
+		for (int i = 1; i < move; i++) {
+			bottom = bottom->below;
+			if (bottom == NULL) {
+				printf("Bottom problem\n");
+			}
+		}
+		stacks[from] = bottom->below;
+		bottom->below = stacks[to];
+		stacks[to] = top;
 	}
 
 	printstack(stacks, numofstacks);
