@@ -1,1 +1,1 @@
-Practicing C using [advent of code 2022](https://adventofcode.com/2022).
+Practicing C and Rust using [advent of code 2022](https://adventofcode.com/2022).
