@@ -4,8 +4,8 @@ fn main() {
     let score = input
         .lines()
         .fold(0, |mut acc, line| {
-            let opponent  = (line.chars().next().unwrap() as u16)- ('A' as u16) + 1;
-            let yours = (line.chars().nth(2).unwrap() as u16) - ('X' as u16) + 1;
+            let opponent  = (line.chars().next().unwrap() as u32)- ('A' as u32) + 1;
+            let yours = (line.chars().nth(2).unwrap() as u32) - ('X' as u32) + 1;
             let mut win_score = 0;
             if opponent == yours {
                 win_score = 3;
@@ -25,8 +25,8 @@ fn main() {
     let score = input
         .lines()
         .fold(0, |mut acc, line| {
-            let opponent  = (line.chars().next().unwrap() as u16)- ('A' as u16) + 1;
-            let win_score = ((line.chars().nth(2).unwrap() as u16) - ('X' as u16)) * 3;
+            let opponent  = (line.chars().next().unwrap() as u32)- ('A' as u32) + 1;
+            let win_score = ((line.chars().nth(2).unwrap() as u32) - ('X' as u32)) * 3;
             let mut score = win_score;
             score += match win_score {
                 3 => opponent,
