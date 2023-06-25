@@ -29,7 +29,7 @@ impl Dir {
 
 fn main() {
     // File hosts.txt must exist in the current path
-    let input = include_str!("input.txt");
+    let input = include_str!("../../input.txt");
 
     let mut top_dir = Dir::new("/");
 

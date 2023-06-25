@@ -14,7 +14,7 @@ int readuntilline(char *output, int maxlen, int maxlines, char *until, FILE *inp
 int readfromuntil(char *output, int from, int max, char until, char *input);
 
 int main(void) {
-	FILE *input = fopen("input.txt", "r");
+	FILE *input = fopen("../input.txt", "r");
 	if (input == NULL) {
 		printf("Issue opening file\n");
 		return 1;

@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	FILE *fp = fopen("input.txt", "r");
+	FILE *fp = fopen("../input.txt", "r");
 	if (fp == NULL)
 	{
 		printf("Couldn't open file\n");

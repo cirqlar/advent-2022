@@ -6,7 +6,7 @@
 int readfromuntil(char *output, int from, int max, char until, char *input);
 
 int main(void) {
-	FILE *input = fopen("input.txt", "r");
+	FILE *input = fopen("../input.txt", "r");
 	if (input == NULL) {
 		printf("Issue loading file\n");
 		return 1;

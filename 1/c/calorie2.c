@@ -16,7 +16,7 @@ void insertMax(int *max, int maxLength, int current)
 
 int main(void)
 {
-	FILE *input = fopen("input.txt", "r");
+	FILE *input = fopen("../input.txt", "r");
 	if (input == NULL)
 	{
 		printf("Couldn't open file\n");
