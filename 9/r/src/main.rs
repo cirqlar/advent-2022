@@ -33,7 +33,7 @@ fn main() {
                 let x_distance = rope[i-1].0 - rope[i].0;
                 let y_distance = rope[i-1].1 - rope[i].1;
 
-                if i32::abs(x_distance) > 1 || i32::abs(y_distance) >= 2 {
+                if i32::abs(x_distance) > 1 || i32::abs(y_distance) > 1 {
                     rope[i].0 += sign(x_distance);
                     rope[i].1 += sign(y_distance);
                 }
